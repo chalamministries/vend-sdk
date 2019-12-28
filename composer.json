@@ -1,20 +1,25 @@
 {
-    "name": "simplesquid/vend-sdk",
+    "name": "chalam/vend-sdk",
     "description": "An unoffical PHP SDK for Vend POS",
     "keywords": [
-        "simplesquid",
         "vend-sdk",
         "sdk",
         "point-of-sale",
         "vend"
     ],
-    "homepage": "https://github.com/simplesquid/vend-sdk",
+    "homepage": "https://github.com/chalamministries/vend-sdk",
     "license": "MIT",
     "authors": [
         {
             "name": "Matthew Pouter",
             "email": "matthew.poulter@simplesquid.co.za",
-            "homepage": "https://simplesquid.co.za/",
+            "homepage": "https://simplesquid.co.za",
+            "role": "Developer"
+        },
+        {
+            "name": "Steven Gauerke",
+            "email": "steven@chalamministries.com",
+            "homepage": "https://mychm.co",
             "role": "Developer"
         }
     ],
