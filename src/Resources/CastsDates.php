@@ -11,7 +11,7 @@ trait CastsDates
     public function __construct(array $parameters)
     {
         /** @var \SimpleSquid\Vend\Resources\TwoDotZero\Property[] $properties */
-        $properties = $this->getPublicProperties(new ReflectionClass(static::class));
+        $properties = $this->getFieldValidators(new ReflectionClass(static::class));
 
         foreach ($properties as $key => $property) {
             if (in_array('\Carbon\Carbon', $property->getTypes()) && isset($parameters[$key])) {
@@ -29,7 +29,7 @@ trait CastsDates
     {
         $array = parent::toArray();
 
-        $properties = $this->getPublicProperties(new ReflectionClass(static::class));
+        $properties = $this->getFieldValidators(new ReflectionClass(static::class));
 
         foreach ($properties as $key => $property) {
             if (in_array('\Carbon\Carbon', $property->getTypes()) && isset($array[$key])) {
