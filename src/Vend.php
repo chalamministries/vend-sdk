@@ -10,7 +10,7 @@ use SimpleSquid\Vend\Concerns\HasActionManagers;
 use SimpleSquid\Vend\Concerns\MakesHttpRequests;
 use SimpleSquid\Vend\Exceptions\AuthorisationException;
 use SimpleSquid\Vend\Exceptions\TokenExpiredException;
-use SimpleSquid\Vend\Resources\OneDotZero\Token;
+use SimpleSquid\Vend\Resources\TwoDotZero\Token;
 
 class Vend
 {
