@@ -14,7 +14,7 @@ trait CastsDates
         $properties = $this->getFieldValidators(new ReflectionClass(static::class));
 
         foreach ($properties as $key => $property) {
-            if (in_array('\Carbon\Carbon', $property->getTypes()) && isset($parameters[$key])) {
+            if (in_array('\Carbon\Carbon', $property->allowedTypes) && isset($parameters[$key])) {
                 try {
                     $parameters[$key] = is_null($parameters[$key]) ? null : new Carbon($parameters[$key]);
                 } catch (Exception $e) {
@@ -32,7 +32,7 @@ trait CastsDates
         $properties = $this->getFieldValidators(new ReflectionClass(static::class));
 
         foreach ($properties as $key => $property) {
-            if (in_array('\Carbon\Carbon', $property->getTypes()) && isset($array[$key])) {
+            if (in_array('\Carbon\Carbon', $property->allowedTypes) && isset($array[$key])) {
                 $array[$key] = $array[$key] instanceof Carbon ? $array[$key]->toRfc3339String() : $array[$key];
             }
         }
